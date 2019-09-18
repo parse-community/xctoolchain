@@ -77,7 +77,7 @@ module XCTask
     def build_ios_framework
       framework_paths = []
       framework_paths << build_framework('iphoneos')
-      framework_paths << build_framework('iphonesimulator', '"platform=iOS Simulator,name=iPhone 6s"')
+      framework_paths << build_framework('iphonesimulator', '"platform=iOS Simulator,OS=13.1,name=iPhone XS"')
       final_path = final_framework_path
 
       system("rm -rf #{final_path} && cp -R #{framework_paths[0]} #{final_path}")
